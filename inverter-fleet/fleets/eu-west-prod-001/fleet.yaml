@@ -7,6 +7,7 @@ spec:
     matchLabels:
       fleet: tj-fleet-1
       newkey: newval
+      asd: aaa
   template:
     spec:
       os:
