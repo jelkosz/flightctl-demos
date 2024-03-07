@@ -1,11 +1,11 @@
 apiVersion: v1alpha1
 kind: Fleet
 metadata:
-  name: eu-west-prod-001
+  name: tj-fleet1
 spec:
   selector:
     matchLabels:
-      fleet: eu-west-prod-001
+      fleet: tj-fleet-1
   template:
     spec:
       os:
