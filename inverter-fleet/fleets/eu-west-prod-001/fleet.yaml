@@ -6,6 +6,7 @@ spec:
   selector:
     matchLabels:
       fleet: tj-fleet-1
+      other-labe: other-value
   template:
     spec:
       os:
