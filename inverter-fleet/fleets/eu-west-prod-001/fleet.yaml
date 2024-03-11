@@ -5,35 +5,9 @@ metadata:
 spec:
   selector:
     matchLabels:
-      fleet: tj-fleet-1
-      newkey: newval
-      asd: aaa
+      fleet: tj-f1
   template:
     spec:
       os:
-        image: quay.io/solar-farms/ai-inverter:1.5.0
-
-      config:
-        - name: model-server
-          gitRef:
-            repoUrl: https://github.com/flightctl/flightctl-demos.git
-            repoRef: main
-            repoPath: /inverter-fleet/deployment-manifests/
-            mountPath: /etc/microshift/manifests
-        - name: pull-secret
-          secretRef:
-            name: device-pull-secret
-            namespace: devices
-            mountPath: /etc/crio/pull-secret
-
-      containers:
-        matchPatterns:
-          - "*ai-optimizer-model-server*"
-          - "*web-interface*"
-          - "*control-loop*"
-
-      systemd:
-       matchPatterns:
-        - inverter.service
-        - rs485-protocol.service
+        image: quay.io/flightctl/flightctl-agent-basic-nginx:latest
 
