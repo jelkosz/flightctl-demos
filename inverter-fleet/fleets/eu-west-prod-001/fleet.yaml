@@ -1,7 +1,7 @@
 apiVersion: v1alpha1
 kind: Fleet
 metadata:
-  name: tj-fleet1
+  name: tj-fleet2
 spec:
   selector:
     matchLabels:
